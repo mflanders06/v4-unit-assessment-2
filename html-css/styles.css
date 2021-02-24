@@ -50,19 +50,19 @@ nav > a:visited{
 }
 
 main{
-    padding:7vh;
+    padding-top:10vh;
     display: flex;
     flex-direction: row;
 }
 
 #left{
     margin-left: 9vw;
-    width: 55vw;
+    width: 59vw;
 }
 
 #right{
     margin-right: 9vw;
-    width: 27vw;
+    width: 21vw;
     display:flex;
     flex-direction:column;
     align-items: flex-end;
@@ -72,17 +72,19 @@ main{
 .profileBox{
     display: flex;
     flex-direction: column;
-    width: 27vw;
+    width: 18vw;
     align-items: center;
+    box-shadow: 10px 10px 15px rgba(102, 75, 75, .3), -10px -10px 15px rgba(102, 75, 75, .3);
 }
 
 .profilePic{
-    width: 20vw;
+    width: 15vw;
 }
 
 #articles{
+    margin-top:33px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 27vw;
+    width: 18vw;
 }
