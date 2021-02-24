@@ -12,3 +12,77 @@ the font is called 'nunito' and can be found on google fonts
 ***you can use it if you'd like or you can choose your own***
 
 */
+
+header{
+    background-color: rgb(37, 37, 37);
+    width: 100vw;
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+}
+
+.headerLeft{
+    margin-left: 1vw;
+    width: 40vw;
+    color:rgb(42, 171, 226);
+
+
+}
+
+.headerRight{
+    margin-right:1vw;
+    width:58vw;
+    display:flex;
+    justify-content: flex-end;
+    color: rgb(255, 255, 255);
+}
+
+nav > a:link{
+    text-decoration: none;
+    color: white;
+
+}
+nav > a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+main{
+    padding:7vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#left{
+    margin-left: 9vw;
+    width: 55vw;
+}
+
+#right{
+    margin-right: 9vw;
+    width: 27vw;
+    display:flex;
+    flex-direction:column;
+    align-items: flex-end;
+
+}
+
+.profileBox{
+    display: flex;
+    flex-direction: column;
+    width: 27vw;
+    align-items: center;
+}
+
+.profilePic{
+    width: 20vw;
+}
+
+#articles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 27vw;
+}
