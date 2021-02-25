@@ -12,10 +12,15 @@ the font is called 'nunito' and can be found on google fonts
 ***you can use it if you'd like or you can choose your own***
 
 */
+body{
+    box-sizing: border-box;
+    height: 100%;
+    font-family: "Nunito";
+}
 
 header{
     background-color: rgb(37, 37, 37);
-    width: 100vw;
+    width: 98vw;
     height: 7vh;
     display: flex;
     flex-direction: row;
@@ -33,10 +38,15 @@ header{
 
 .headerRight{
     margin-right:1vw;
-    width:58vw;
+    width:56vw;
     display:flex;
     justify-content: flex-end;
     color: rgb(255, 255, 255);
+}
+
+nav > a{
+    margin-left: 30px;
+    margin-right: 20px;
 }
 
 nav > a:link{
@@ -51,18 +61,19 @@ nav > a:visited{
 
 main{
     padding-top:10vh;
+    padding-bottom:45px;
     display: flex;
     flex-direction: row;
 }
 
 #left{
     margin-left: 9vw;
-    width: 59vw;
+    width: 58vw;
 }
 
 #right{
     margin-right: 9vw;
-    width: 21vw;
+    width: 20vw;
     display:flex;
     flex-direction:column;
     align-items: flex-end;
@@ -81,10 +92,86 @@ main{
     width: 15vw;
 }
 
+h2{
+    margin: 20px;
+    font-size: 20px;
+}
+
+h1{
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+h3{
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+
 #articles{
     margin-top:33px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 18vw;
+    box-shadow: 10px 10px 15px rgba(102, 75, 75, .3), -10px -10px 15px rgba(102, 75, 75, .3);
+
+}
+
+ol{
+    list-style-type: decimal;
+    line-height: 22px;
+    font-size: 14px;
+}
+
+#gallery{
+    display: flex;
+    flex-direction: column;
+    width: 59vw;
+}
+
+#viewLarger{
+    margin-left: auto;
+    color: rgb(42, 171, 226)
+}
+
+#imagesContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.galleryImages{
+    height:90px;
+    margin: 25px;
+}
+
+footer{
+    position:relative;
+    margin-top: -45px;
+    height: 45px;
+    clear: both;
+    width: 98vw;
+    background-color: rgb(42, 171, 226);
+    align-items: center;
+}
+
+#footerText{
+
+    margin-left:50px;
+}
+
+.help{
+    position: fixed;
+    width:23px;
+    height: 23px;  
+    border: 1.5px solid black;
+    border-radius: 100%;
+    right: 10px;
+    bottom: 10px;
+    align-items: center;
+}
+
+.helpIcon{
+    margin:5px;
+    margin-left:7px;
 }
