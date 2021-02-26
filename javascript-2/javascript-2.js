@@ -36,6 +36,11 @@ let foods = [
 */
 
 //CODE HERE
+foods.forEach(function(val, i, arr){
+  foods[i].calories = ((foods[i].carbs * 4) + (foods[i].protein * 4) + (foods[i].fat * 9));
+})
+
+//console.log(foods);
 
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
@@ -82,6 +87,23 @@ const products = [
 
 //CODE HERE
 
+/*
+saleProducts = products.map( function(val, i, arr){
+  return {
+          name: products[i].name,
+          color: products[i].color,
+          price: products[i].price  -= (products[i].price * 0.25)
+          }
+})
+//console.log(saleProducts);
+*/
+
+let saleProducts = products.map( function(val, i){
+  products[i].price -= (products[i].price * 0.25)
+  return val
+});
+//console.log(saleProducts);
+
 ////////////////////PROBLEM 3////////////////////
 /*
   A customer has placed an order - they want one of every product that has blue on it. 
@@ -91,7 +113,10 @@ const products = [
 */
 
 //CODE HERE
-
+let blueProducts = saleProducts.filter(function(val, i, arr){
+  return arr[i].color.includes('blue')
+})
+//console.log(blueProducts)
 ////////////////////PROBLEM 4////////////////////
 /*
   Now you'd like to get them their order total. 
@@ -100,6 +125,19 @@ const products = [
 */
 
 //CODE HERE
+/*let orderTotal = blueProducts.reduce(function(prev, curr){
+  return prev + curr
+}, 0);
+//These are objects, not numbers. Fail
+*/
+
+let orderTotal = blueProducts.reduce(function(prev, curr){
+  return prev + curr.price
+}, 0);
+
+
+
+//console.log(orderTotal);
 
 //////////////////////////////////PROBLEMS 5-8//////////////////////////////////
 /*
@@ -130,6 +168,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
+let helensInfo = Object.assign(shippingInfo, contactInfo);
 
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -139,6 +178,10 @@ const shippingInfo = {
 */
 
 //CODE HERE
+let ellensInfo = {...helensInfo};
+ellensInfo.name = 'Ellen';
+ellensInfo.email = 'ellen@email.com';
+
 
 ////////////////////PROBLEM 7////////////////////
 /* 
@@ -146,6 +189,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
+let {email} = ellensInfo;
 
 ////////////////////PROBLEM 8////////////////////
 /*
@@ -154,6 +198,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
+let {zipCode, state} = shippingInfo;
 
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////
 /*
