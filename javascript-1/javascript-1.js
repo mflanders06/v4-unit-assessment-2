@@ -61,7 +61,14 @@ let animalsCopy = [...animals, 'elephant'];
 */
 
 //CODE HERE
-
+compareNums = (num1, num2) => {
+    if (num1 > num2){
+        return num1
+    }
+    else{
+        return num2
+    }
+}
   
 ////////////////////PROBLEM 5////////////////////
 /*
@@ -73,15 +80,18 @@ let animalsCopy = [...animals, 'elephant'];
 */
 
 //CODE HERE
+bestMovie = (movie) => {return `${movie} is the best movie ever!`}
+  //console.log(bestMovie('Mike Was Here'));
   
-  
+
 ////////////////////PROBLEM 6////////////////////
 /*
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
 
 //CODE HERE
-  
+jsNinja = () => {return 'I am a JavaScript ninja!'}
+  //console.log(jsNinja());
 
 ////////////////////PROBLEM 7////////////////////
 
@@ -102,6 +112,7 @@ let animalsCopy = [...animals, 'elephant'];
 */
 
 //CODE HERE
+delete gameInfo.rating;
   
 
 ////////////////////PROBLEM 8////////////////////
@@ -124,7 +135,11 @@ let animalsCopy = [...animals, 'elephant'];
 */
 
 //CODE HERE
-  
+for (let key in shapes){
+    if (shapes[key] % 2 !== 0){
+        delete shapes[key]
+    }
+}
   
 ////////////////////PROBLEM 9////////////////////
 
@@ -166,7 +181,13 @@ const classes = [
 */
 
 //CODE HERE
-
+for (let i = 0; i < classes.length; i++){
+    for (let key in classes[i]){
+        if (classes[i][key] === true){
+            classes[i][key] = false;
+        }
+    }
+}
   
 ////////////////////PROBLEM 10////////////////////
 /*
@@ -182,8 +203,14 @@ let pairsArray = []
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-
-    
+for (let i = 0; i <  lettersToPair.length - 1; i++){
+    for (let j = i + 1; j < lettersToPair.length; j++){
+        if(lettersToPair[i] === lettersToPair[j]){
+            pairsArray.push([i, j]);
+        }
+    }
+}
+//console.log(pairsArray);
 
 //////////////////////////////////PROBLEMS 11-14//////////////////////////////////
 /*
