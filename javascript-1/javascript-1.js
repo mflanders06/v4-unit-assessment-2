@@ -275,7 +275,7 @@ fidoSpeak = bark.call(fido);
 //CODE HERE
 function teachTrick(trick){
     this.tricks.push(trick);
-    console.log(trick);
+    //console.log(trick);
 }
 
 
@@ -285,7 +285,10 @@ function teachTrick(trick){
 */
 
 //CODE HERE
+let teachStay = teachTrick.bind(fido, 'stay');
+//teachStay();
 
+console.log(fido)
 /*
 teachStay = teachTrick.bind('stay', this.tricks);
 teachStay.call(fido);
