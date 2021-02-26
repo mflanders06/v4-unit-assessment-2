@@ -289,7 +289,7 @@ function teachTrick(trick){
 let teachStay = teachTrick.bind(fido, 'stay');
 //teachStay();
 
-console.log(fido)
+//console.log(fido)
 /*
 teachStay = teachTrick.bind('stay', this.tricks);
 teachStay.call(fido);
