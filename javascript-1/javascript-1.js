@@ -275,6 +275,7 @@ fidoSpeak = bark.call(fido);
 //CODE HERE
 function teachTrick(trick){
     this.tricks.push(trick);
+    return this.tricks;
     //console.log(trick);
 }
 
