@@ -226,6 +226,12 @@ for (let i = 0; i <  lettersToPair.length - 1; i++){
 */
 
 //CODE HERE
+function Dog(name, age, breed, tricks){
+    this.name = name;
+    this.age = age;
+    this.breed = breed;
+    this.tricks = tricks;
+}
 
 
 /*
@@ -235,6 +241,7 @@ for (let i = 0; i <  lettersToPair.length - 1; i++){
 */
 
 //CODE HERE
+let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
   
 
 ////////////////////PROBLEM 12////////////////////
@@ -245,7 +252,9 @@ for (let i = 0; i <  lettersToPair.length - 1; i++){
 */
 
 //CODE HERE
-
+function bark(){
+    return `${this.name} says bark!`
+}
 
 /*
     Invoke the call method on bark, passing in fido as the context
@@ -253,7 +262,7 @@ for (let i = 0; i <  lettersToPair.length - 1; i++){
 */
 
 //CODE HERE
-  
+fidoSpeak = bark.call(fido);
   
 ////////////////////PROBLEM 13////////////////////
 /*
@@ -264,6 +273,10 @@ for (let i = 0; i <  lettersToPair.length - 1; i++){
 */
 
 //CODE HERE
+function teachTrick(trick){
+    this.tricks.push(trick);
+    console.log(trick);
+}
 
 
 /*
@@ -272,8 +285,12 @@ for (let i = 0; i <  lettersToPair.length - 1; i++){
 */
 
 //CODE HERE
-  
-  
+
+/*
+teachStay = teachTrick.bind('stay', this.tricks);
+teachStay.call(fido);
+*/
+
 ////////////////////PROBLEM 14////////////////////
 /*
     Write a function called 'dogIntro' that will take in two parameters, treat and toy,
@@ -283,7 +300,9 @@ for (let i = 0; i <  lettersToPair.length - 1; i++){
 */
 
 //CODE HERE
-
+function dogIntro(treat, toy){
+    return `${this.name} is a ${this.breed} that loves ${treat} and their ${toy}!`
+}
 
 /*
     Invoke the apply method on dogIntro, passing in fido as the context 
@@ -292,7 +311,8 @@ for (let i = 0; i <  lettersToPair.length - 1; i++){
 */
 
 //CODE HERE
-  
+let fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball']);
+  //console.log(fidoIntro);
 
 ////////////////////PROBLEM 15////////////////////
 /*
@@ -302,6 +322,13 @@ for (let i = 0; i <  lettersToPair.length - 1; i++){
 */
 
 //CODE HERE
+function Phone(brand, model, storage, color, sold){
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage;
+    this.color = color;
+    this.sold = sold;
+}
 
   
 /*
@@ -316,11 +343,11 @@ for (let i = 0; i <  lettersToPair.length - 1; i++){
 */
 
 //CODE HERE
-  // let phone1 = 
+   let phone1 = new Phone('Samsung', 'Galaxy S6', 32, 'slate', false);
   
-  // let phone2 = 
+   let phone2 = new Phone('Nokia', '3310', 8, 'green', false);
   
-  // let phone3 = 
+   let phone3 = new Phone('Google', 'Pixel 2', 64, 'black', false);
   
 /*
     Last, add a prototype method to Phone.
@@ -332,4 +359,9 @@ for (let i = 0; i <  lettersToPair.length - 1; i++){
 
 //CODE HERE
 
-  
+  Phone.prototype.sell = function(){
+      this.sold = true;
+      return `${this.brand} ${this.model} has been sold.`
+  }
+
+  //console.log(phone3.sell());
