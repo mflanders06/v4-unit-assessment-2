@@ -261,6 +261,8 @@ const userInfo = {
 */
 
 //CODE HERE
+let shouldAlert = userInfo.settings.alerts;
+
 
 ////////////////////PROBLEM 10////////////////////
 /*
@@ -269,6 +271,8 @@ const userInfo = {
 */
 
 //CODE HERE
+let topic = userInfo.topics[userInfo.topics.length - 1];
+
 
 ////////////////////PROBLEM 11////////////////////
 /*
@@ -277,6 +281,7 @@ const userInfo = {
 */
 
 //CODE HERE
+let commenterId = userInfo.comments[1].responses[0].userId;
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -296,6 +301,23 @@ const userInfo = {
 */
 
 //CODE HERE
+
+let person = {
+  name: 'Mike',
+  age: 40,
+  jobs: ['IT manager', 'Technical Support Manager', 'Tier 3 support'],
+  birthday: function(){ return this.age++  },
+  favorites: {
+    color: 'blue',
+    number: 6,
+    book: 'Mistborn'
+  },
+  kids: [ {name: 'Abigail', age: 16},
+          {name: 'Lauren',  age: 13}, 
+          {name: 'Hayden',  age: 8}
+        ]
+
+}
 
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
@@ -321,7 +343,7 @@ const workout = {
 //let context1 = myFunc
 //let context1 = window
 //let context1 = global
-// let context1 = workout
+ let context1 = workout
 
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -334,6 +356,6 @@ function myFunc() {
 }
 
 //let context2 = myFunc
-// let context2 = window
+ let context2 = window
 //let context2 = global
 //let context2 = workout
